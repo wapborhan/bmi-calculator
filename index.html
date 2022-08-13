@@ -10,74 +10,92 @@
 
 <body>
 
-  <div class="sidebar">
-    <div class="sidebar-head">
-      <img src="src/img/logo.png" class="img-fluid logoimg" alt="">
-
-    </div>
-    <div class="separatebd"></div>
-    <nav class="menu">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link nav-icon " aria-current="page" href="index.html">Calculator</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-icon " href="age.html">Age Calculator</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-icon active" href="bmi.html">BMI Calculator</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-icon" href="grade.html">Grade Calculator</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-icon active" href="discount.html">Discount Calculator</a>
-        </li>
-      </ul>
+  <header>
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+      <div class="container">
+        <a class="navbar-brand navbar-logo" href="#"><img src="src/img/logo.png" class="imglogo" alt=""></a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <div class="hori-selector">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="https://code.wapborhan.com/calculator/"><i
+                  class="fas fa-tachometer-alt"></i>Calculate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://code.wapborhan.com/age-calculator/"><i class="fas fa-house-user"></i>Age
+                Calculate</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"><i class="far fa-clone"></i>BMI
+                Calculate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://code.wapborhan.com/discount-calculator/"><i
+                  class="far fa-calendar-alt"></i>Discount Calculate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://code.wapborhan.com/grade-calculator/"><i
+                  class="far fa-calendar-alt"></i>Grade Calculate</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-  </div>
+
+  </header>
   <div class="main-wraper">
-
     <div class="container">
-      <div class="age-cal w-100 d-flex">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card mt-5 ">
+            <div class="card-header">BMI Calculator</div>
+            <div class="card-body">
 
-        <div class="card mt-5 h-100">
-          <div class="card-header">BMI Calculator</div>
-          <div class="card-body">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Height</span>
+                <input type="number" id="height" class="form-control" placeholder="Feet.Inc">
+              </div>
 
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">Height</span>
-              <input type="number" id="height" class="form-control" placeholder="Feet.Inc">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Weight</span>
+                <input type="text" id="weight" class="form-control" placeholder="KG">
+              </div>
             </div>
-
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">Weight</span>
-              <input type="text" id="weight" class="form-control" placeholder="KG">
+            <div class="card-footer">
+              <button class="btn btn-success w-100" id="calculate">Calculate BMI</button>
             </div>
           </div>
-          <div class="card-footer">
-            <button class="btn btn-success w-100" id="calculate">Calculate BMI</button>
+        </div>
+        <div class="col-md-9">
+          <div id="card-res" class="card w-100 mt-5 ">
+            <div class="card-header bg-danger text-light">
+              Result
+            </div>
+            <div class="card-body text-center d-flex">
+              <div class="meter">
+                <h2 class="comment"></h2>
+                <div id="chart"></div>
+              </div>
+              <div class="imaged">
+                <img id="show-img" class="img-fluid">
+              </div>
+
+              <!-- <div id="bmi-result">Your BMI is: 00.00</div> -->
+
+            </div>
           </div>
         </div>
 
 
-        <div id="card-res" class="card w-75 mt-5 ms-3">
-          <div class="card-header bg-danger text-light">
-            Result
-          </div>
-          <div class="card-body text-center d-flex">
-            <div class="meter">
-              <h2 class="comment"></h2>
-              <div id="chart"></div>
-            </div>
-            <div class="imaged">
-              <img id="show-img" class="img-fluid">
-            </div>
 
-            <!-- <div id="bmi-result">Your BMI is: 00.00</div> -->
 
-          </div>
-        </div>
 
       </div>
     </div>
@@ -89,9 +107,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.0.2/echarts.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
+  <script src="src/js/header.js"></script>
   <script src="src/js/bmi.js"></script>
 </body>
 
